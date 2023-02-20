@@ -1,4 +1,48 @@
 <!--
     This document is to determine what should go into the web app before it becomes interactive.
     This will basically be like pretty much any circuit analysis lesson (plus some commentary on how I generally do things)
+    This will be used as the basis of something interactive at index.html.
+    Possible further things to add after I have created the DC resistive circuit sections and made them interactive:
+     -  AC resistive circuits
+     -  DC op amps and transistors
+     -  ADCs and DACs (may be out of scope)
+     -  Equivalent circuit model
+
+    What is the aim?
+    To teach people how to calculate the following properties of DC circuits:
+     -  Voltages (relative to ground, and across components)
+     -  Currents (through components and wires)
+     -  Resistances (of components with unspecified values, as well as equivalent resistances)
+    To allow people to quickly experiment with different solution strategies, by:
+     -  Automatically handling lower level details like the algebra
+     -  Making simplifying groups of resistors quick to do, and visualisable
+    To imitate how people do things on paper
+     -  Allow people to label components with voltage, current, and resistance variables if they aren't already present
+
+    List of sections:
+
+    Analysis of DC resistive circuits
+    Kirchhoff's Current Law (taught using circuits with current sources and resistors,
+        + special case where components are only connected at one end)
+    Kirchhoff's Voltage Law (taught using circuits with current sources and resistors)
+    Voltage and resistance model of a battery
+    Ohm's Law (taught using both current sources and voltage sources)
+    Equivalent resistance of resistors in series (with examples with strange layout)
+    Equivalent resistance of resistors in parallel (with examples with strange layout)
+    Simplifying parallel and series voltage and current sources
+    Practice: multi-step simplification
+    Node-voltage analysis
+
+    Extra DC resistive circuit analysis techniques
+    Superposition
+    Thevenin equivalent
+    Norton equivalent
+    Delta-Wye transformation
+
+    Ideas:
+    Use a traffic analogy for electricity - hills and valleys to illustrate potential, and traffic jams for Ohm's Law. Current is explained by the analogy quite easily.
+    Use non-examples to help people to avoid mistakes
+        e.g if two resistors are connected together and something is connected to the central node,
+        then we cannot do series simplification on the former two resistors
+    Make people generate new variable names if automatically generated ones would be ambiguous
 -->
