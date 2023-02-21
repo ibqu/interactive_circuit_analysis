@@ -7,6 +7,10 @@
      -  DC op amps and transistors
      -  ADCs and DACs (may be out of scope)
      -  Equivalent circuit model
+    
+    I should avoid getting stuck in coding complex algorithms before I have something that works,
+    so I should to create content for every possible scenario
+    (or until I have a clear idea of the rules which should be implemented)
 
     What is the aim?
     To teach people how to calculate the following properties of DC circuits:
@@ -18,6 +22,13 @@
      -  Making simplifying groups of resistors quick to do, and visualisable
     To imitate how people do things on paper
      -  Allow people to label components with voltage, current, and resistance variables if they aren't already present
+    
+    In some ways, the scope of what I want to do is greater than what is discussed in this paper:
+    https://www.researchgate.net/publication/235899805_Interactive_Exercises_on_Analysis_Methods_for_DC_Linear_Electrical_Circuits
+    Here, they restrict the available circuit solving methods to KCL, KVL, mesh analysis, and node analysis.
+    This makes it easy to create interactive exercises for arbitrary resistive circuits.
+    However, this makes the process of analysing circuits restricted and formulaic,
+        and I don't think the lessons transfer well to more general circuits such as those involving op amps and transistors.
 
     List of sections:
 
@@ -32,6 +43,7 @@
     Simplifying parallel and series voltage and current sources
     Practice: multi-step simplification
     Node-voltage analysis
+    Mesh analysis
 
     Extra DC resistive circuit analysis techniques
     Superposition
@@ -45,4 +57,57 @@
         e.g if two resistors are connected together and something is connected to the central node,
         then we cannot do series simplification on the former two resistors
     Make people generate new variable names if automatically generated ones would be ambiguous
+    Separate the stuff which is strictly necessary for learning about circuit analysis from the fluff I want to add,
+        in a "Notes" section (or similar)
+    Automatically save progress in local storage or cookies, to prevent people from losing all of their progress if the close the tab or somehow end up navigating away when clicking on a link.
 -->
+
+<html>
+    <head>
+        <title>Base content document</title>
+    </head>
+    <body>
+        <h1>
+            Attention: if you are looking for interactive lessons, they are not here. This is a planning page.
+            <br>
+            If you are viewing this webpage from a local folder, you will find the interactive lessons by viewing index.html.
+            <br>
+            If you are viewing this webpage at github.io, go to &lt;insert link here&gt;
+        </h1>
+
+        <hr>
+
+        <h1>Introduction</h1>
+        <p>
+            If you are studying physics in college, or studying engineering in university, you will find that your ability to analyse electrical circuits has a nontrivial effect on your grades. And when you are studying this topic, you are likely to try a typical test-taker's strategy - you watch a teacher demonstrate how to analyse circuits in class, you do some exercises from a textbook, you work through the examples past exam papers, and then you do your exam. 
+        </p>
+        <p>
+            But don't be surprised if the typical strategy fails for you. Analysing circuits involves more than just following a series of steps which has been taught to you. At each point, there are many possible steps, and you will usually not be taught how to choose one which brings you closer to the solution. Doing past exam papers will only help you so much. You will walk out of the examination hall convinced that anyone who succeeded in analysing the circuits has mastered arcane magic.
+        </p>
+        <p>
+            I have created these interactive exercises to help you master the strategies needed to analyse circuits. These exercises will allow you to sidestep the boring and tedious calculations, and instead focus on building paths towards the answers.
+        </p>
+
+        <h1>What are we trying to do when we analyse circuits?</h1>
+        <p>The analysis of circuits can serve many different purposes. In lower-level physics and engineering exams, circuits are often analysed to find the following quantities:</p>
+        <ul>
+            <li>The voltage across a component or at a point. Voltage is measured in volts (V).</li>
+            <li>The current through a component or a wire. Current is measured in amperes (A)</li>
+            <li>The resistance of a resistor or incandescent lightbulb. Resistance is measured in ohms (&#8486;)</li>
+        </ul>
+        <h1>Are there good analogies to help me analyse circuits?</h1>
+        <p>Yes, there are. I think a traffic analogy would be the best analogy, as it easily represents three aspects of DC circuits (which you will be analysing in college or early university):</p>
+        <ul>
+            <li>The height of the road can be used to represent voltage. Cars would roll downhill if their drivers were asleep at the wheel, and for resistors the (conventional) current points from the higher voltage end to the lower voltage end.</li>
+            <li>The fact that all cars entering a road or intersection must come out matches the fact that in DC electrical circuits, current into a road or intersection must equal current out.</li>
+            <li>The fact that roads can get traffic jams when there are too many cars matches the fact that the voltage drop (which could be viewed as the energy needed to move electrons through a component) across a resistor increases when current increases.</li>
+        </ul>
+        <p>&lt;diagram of traffic on a road with hills&gt;</p>
+
+        <h1>DC resistive circuits</h1>
+        <h2>Kirchhoff's Current Law</h2>
+        <p>If I had to choose a simple but powerful analogy for electrical circuits, I would use the flow of traffic</p>
+        <p>In the traffic analogy we can see that cars in = cars out. Likewise, in circuits, current in = current out</p>
+        <p></p>
+    </body>
+</html>
